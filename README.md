@@ -139,3 +139,31 @@ Examples:
       $ wells -fu 52b1f905-ff09-4452-9ef1-a59c0afb9638  # Get well with samples
       $ wells --uuid 52b1f905-ff09-4452-9ef1-a59c0afb9638 --full # Get well with samples
 ```
+
+## Samples
+For a list of options available and code examples:
+```bash
+samples -h
+# OR
+samples --help
+
+Usage: samples [options]
+
+Options:
+  -V, --version      output the version number
+  -a, --all          Fetch all samples
+  -u, --uuid [uuid]  Fetch sample by UUID
+  -f, --full         Get sample record with wells
+  -h, --help         output usage information
+
+Examples:
+  Samples:
+    All:
+      $ samples -a  # Get all samples
+      $ samples --all  # Get all samples
+    One:
+      $ samples -u 1c8c856d-e4fd-4755-aa3c-92f34936f800  # Get sample by uuid
+      $ samples --uuid 1c8c856d-e4fd-4755-aa3c-92f34936f800  # Get sample by uuid
+      $ samples -fu 1c8c856d-e4fd-4755-aa3c-92f34936f800  # Get sample with wells
+      $ samples --uuid 1c8c856d-e4fd-4755-aa3c-92f34936f800 --full # Get sample with wells
+```
