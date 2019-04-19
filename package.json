@@ -1,6 +1,6 @@
 {
   "name": "freegenes-fetch",
-  "version": "0.0.44",
+  "version": "0.0.45",
   "description": "A global module for fetching data from the FreeGenes API.",
   "main": "./lib/freegenes-fetch.js",
   "scripts": {

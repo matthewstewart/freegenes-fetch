@@ -47,36 +47,46 @@ parts --help
 Usage: parts [options]
 
 Options:
-  -V, --version                     output the version number
-  -a, --all                         Fetch all parts
-  -u, --uuid [uuid]                 Fetch part by UUID
-  -f, --full                        Get full part record
-  -c, --collection [uuid]           Get parts by collection uuid
-  -t, --fasta                       Return result(s) in fasta format
-  -s, --save [destinationFilePath]  Save result(s) to .json/.fa file.
-  -h, --help                        output usage information
+  -V, --version                output the version number
+  -a, --all                    Fetch all parts
+  -u, --uuid [uuid]            Fetch part by UUID
+  -f, --full                   Get full part record
+  -c, --collection [uuid]      Get parts by collection uuid
+  -t, --fasta                  Return result(s) in fasta format
+  -s, --save [destinationDir]  Save result(s) to .json/.fa file.
+  -h, --help                   output usage information
 
 Examples:
   Parts:
     All:
       $ parts -a  # Get all parts
       $ parts --all  # Get all parts
+      $ parts -as .  # Get all parts and save to current directory
+      $ parts --all --save .  # Get all parts and save to current directory
       $ parts -at  # Get all parts in fasta
       $ parts --all --fasta  # Get all parts in fasta
+      $ parts --all --fasta --save . # Get all parts in fasta and save in current directory
+      $ parts -ats . # Get all parts in fasta and save in current directory
     All By Category:
       $ parts -c 0e19f75d-4e72-499b-924a-a55420a40606  # Get all parts by category uuid
       $ parts --collection 0e19f75d-4e72-499b-924a-a55420a40606  # Get all parts by category uuid
+      $ parts --collection 0e19f75d-4e72-499b-924a-a55420a40606 --save .  # Get all parts by category uuid and save to current directory
       $ parts -tc 0e19f75d-4e72-499b-924a-a55420a40606  # Get all parts by category uuid in fasta
-      $ parts --collection 0e19f75d-4e72-499b-924a-a55420a40606 --fasta # Get all parts by category uuid in fasta
+      $ parts --collection 0e19f75d-4e72-499b-924a-a55420a40606 --fasta  # Get all parts by category uuid in fasta
+      $ parts --collection 0e19f75d-4e72-499b-924a-a55420a40606 --fasta --save .  # Get all parts by category uuid in fasta and save in current directory
+      $ parts -ats . # Get all parts by category uuid in fasta and save in current directory
     One:
       $ parts -u 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get part by uuid
       $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get part by uuid
+      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --save .  # Get part by uuid and save to current directory
       $ parts -tu 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get part by uuid in fasta
-      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --fasta # Get part by uuid in fasta
+      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --fasta  # Get part by uuid in fasta
       $ parts -fu 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get full part by uuid
-      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --full # Get full part by uuid
+      $ parts -fu 6295083d-8a28-4e9e-8b3d-9429c2544761 --save . # Get full part by uuid and save to current directory
+      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --full  # Get full part by uuid
       $ parts -ftu 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get full part by uuid in fasta
-      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --full --fasta # Get full part by uuid in fasta
+      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --full --fasta  # Get full part by uuid in fasta
+      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --full --fasta  --save .  # Get full part by uuid in fasta and save to current directory
 ```
 
 ## Plates
