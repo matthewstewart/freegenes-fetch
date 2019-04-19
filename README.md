@@ -104,10 +104,38 @@ Examples:
       $ plates -af  # Get all plates with wells
       $ plates --all --full # Get all plates with wells
     One:
-      $ plates -u a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get plates by uuid
-      $ plates --uuid a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get plates by uuid
+      $ plates -u a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get plate by uuid
+      $ plates --uuid a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get plate by uuid
       $ plates -fu a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get full plate by uuid
       $ plates --uuid a364eab8-0c68-46b2-8aca-51b72d2f3cb5 --full # Get full plate by uuid
       $ plates -ru a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get recursive plate by uuid
       $ plates --uuid a364eab8-0c68-46b2-8aca-51b72d2f3cb5 --recurse # Get recursive plate by uuid
+```
+
+## Wells
+For a list of options available and code examples:
+```bash
+wells -h
+# OR
+wells --help
+
+Usage: wells [options]
+
+Options:
+  -V, --version      output the version number
+  -a, --all          Fetch all wells
+  -u, --uuid [uuid]  Fetch well by UUID
+  -f, --full         Get full well record
+  -h, --help         output usage information
+
+Examples:
+  Wells:
+    All:
+      $ wells -a  # Get all wells
+      $ wells --all  # Get all wells
+      $ wells -af  # Get all wells with samples
+      $ wells --all --full # Get all wells with samples
+    One:
+      $ wells -u 52b1f905-ff09-4452-9ef1-a59c0afb9638  # Get well by uuid
+      $ wells --uuid 52b1f905-ff09-4452-9ef1-a59c0afb9638  # Get well by uuid
 ```

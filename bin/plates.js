@@ -19,8 +19,8 @@ program.on('--help', function(){
   console.log('      $ plates -af  # Get all plates with wells');
   console.log('      $ plates --all --full # Get all plates with wells');  
   console.log('    One:');
-  console.log('      $ plates -u a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get plates by uuid');
-  console.log('      $ plates --uuid a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get plates by uuid');
+  console.log('      $ plates -u a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get plate by uuid');
+  console.log('      $ plates --uuid a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get plate by uuid');
   console.log('      $ plates -fu a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get full plate by uuid');
   console.log('      $ plates --uuid a364eab8-0c68-46b2-8aca-51b72d2f3cb5 --full # Get full plate by uuid');
   console.log('      $ plates -ru a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get recursive plate by uuid');
