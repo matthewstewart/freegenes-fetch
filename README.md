@@ -133,9 +133,9 @@ Examples:
     All:
       $ wells -a  # Get all wells
       $ wells --all  # Get all wells
-      $ wells -af  # Get all wells with samples
-      $ wells --all --full # Get all wells with samples
     One:
       $ wells -u 52b1f905-ff09-4452-9ef1-a59c0afb9638  # Get well by uuid
       $ wells --uuid 52b1f905-ff09-4452-9ef1-a59c0afb9638  # Get well by uuid
+      $ wells -fu 52b1f905-ff09-4452-9ef1-a59c0afb9638  # Get well with samples
+      $ wells --uuid 52b1f905-ff09-4452-9ef1-a59c0afb9638 --full # Get well with samples
 ```

@@ -15,11 +15,11 @@ program.on('--help', function(){
   console.log('    All:');
   console.log('      $ wells -a  # Get all wells');
   console.log('      $ wells --all  # Get all wells');
-  console.log('      $ wells -af  # Get all wells with samples');
-  console.log('      $ wells --all --full # Get all wells with samples');  
   console.log('    One:');
   console.log('      $ wells -u 52b1f905-ff09-4452-9ef1-a59c0afb9638  # Get well by uuid');
   console.log('      $ wells --uuid 52b1f905-ff09-4452-9ef1-a59c0afb9638  # Get well by uuid');
+  console.log('      $ wells -fu 52b1f905-ff09-4452-9ef1-a59c0afb9638  # Get well with samples');
+  console.log('      $ wells --uuid 52b1f905-ff09-4452-9ef1-a59c0afb9638 --full # Get well with samples');
 });
 
 program.parse(process.argv);
