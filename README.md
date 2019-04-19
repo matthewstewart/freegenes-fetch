@@ -12,38 +12,29 @@ For a list of options available and code examples:
 collections -h
 # OR
 collections --help
-```
 
-### All Collections
-Use the `-a` or `--all` flag to indicate that you would like all records:
-```bash
-collections -a
-# OR
-collections --all
-```
+Usage: collections [options]
 
-### Collection
-Use the `-u` or `--uuid` flag to indicate the `uuid` of the collection you would like to fetch:
-```bash
-collections -u <uuid>
-# OR
-collections --uuid <uuid>
-```
+Options:
+  -V, --version      output the version number
+  -a, --all          Fetch all collections
+  -u, --uuid [uuid]  Set UUID for query
+  -f, --full         Get full collection record
+  -r, --recurse      Get full collection record recursive tree
+  -h, --help         output usage information
 
-### Full Collection
-Use the `-f` or `--full` flag to fetch the full collection record including parts:
-```bash
-collections -fu <uuid>
-# OR
-collections -u <uuid> --full
-```
-
-### Recursive Collection
-Use the `-r` or `--recurse` flag to fetch the full collection record including parts:
-```bash
-collections -ru <uuid>
-# OR
-collections -u <uuid> --recurse
+Examples:
+  Collections:
+    All:
+      $ collections -a  # Get all collections
+      $ collections --all  # Get all collections
+    One:
+      $ collections -u 0e19f75d-4e72-499b-924a-a55420a40606  # Get collection by uuid
+      $ collections --uuid 0e19f75d-4e72-499b-924a-a55420a40606  # Get collection by uuid
+      $ collections -fu 0e19f75d-4e72-499b-924a-a55420a40606  # Get full collection by uuid
+      $ collections --uuid 0e19f75d-4e72-499b-924a-a55420a40606 --full # Get full collection by uuid
+      $ collections -fu 0e19f75d-4e72-499b-924a-a55420a40606  # Get recursive collection by uuid
+      $ collections --uuid 0e19f75d-4e72-499b-924a-a55420a40606 --full # Get recursive collection by uuid
 ```
 
 ## Parts
@@ -52,44 +43,38 @@ For a list of options available and code examples:
 parts -h
 # OR
 parts --help
-```
 
-### All Parts
-Use the `-a` or `--all` flag to indicate that you would like all records:
-```bash
-parts -a
-# OR
-parts --all
-# OR Return Fasta
-parts -af
-```
+Usage: parts [options]
 
-### Part
-Use the `-u` or `--uuid` flag to indicate the `uuid` of the part you would like to fetch:
-```bash
-parts -u <uuid>
-# OR
-parts --uuid <uuid>
-# OR Return Fasta
-parts --uuid <uuid> --fasta
-```
+Options:
+  -V, --version                     output the version number
+  -a, --all                         Fetch all parts
+  -u, --uuid [uuid]                 Fetch part by UUID
+  -f, --full                        Get full part record
+  -c, --collection [uuid]           Get parts by collection uuid
+  -t, --fasta                       Return result(s) in fasta format
+  -s, --save [destinationFilePath]  Save result(s) to .json/.fa file.
+  -h, --help                        output usage information
 
-### Full Part
-Use the `-f` or `--full` flag to fetch the full part record including samples:
-```bash
-parts -fu <uuid>
-# OR
-parts -u <uuid> --full
-# OR Return Fasta
-parts -u <uuid> --full --fasta
-```
-
-### Parts By Collection 
-Use the `-c` or `--collection` flag to fetch the all parts by collection `uuid`:
-```bash
-parts -c <uuid>
-# OR
-parts --collection <uuid>
-# OR Return Fasta
-parts --collection <uuid> --fasta
+Examples:
+  Parts:
+    All:
+      $ parts -a  # Get all parts
+      $ parts --all  # Get all parts
+      $ parts -at  # Get all parts in fasta
+      $ parts --all --fasta  # Get all parts in fasta
+    All By Category:
+      $ parts -c 0e19f75d-4e72-499b-924a-a55420a40606  # Get all parts by category uuid
+      $ parts --collection 0e19f75d-4e72-499b-924a-a55420a40606  # Get all parts by category uuid
+      $ parts -tc 0e19f75d-4e72-499b-924a-a55420a40606  # Get all parts by category uuid in fasta
+      $ parts --collection 0e19f75d-4e72-499b-924a-a55420a40606 --fasta # Get all parts by category uuid in fasta
+    One:
+      $ parts -u 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get part by uuid
+      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get part by uuid
+      $ parts -tu 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get part by uuid in fasta
+      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --fasta # Get part by uuid in fasta
+      $ parts -fu 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get full part by uuid
+      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --full # Get full part by uuid
+      $ parts -ftu 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get full part by uuid in fasta
+      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --full --fasta # Get full part by uuid in fasta
 ```
