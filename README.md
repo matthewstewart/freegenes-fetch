@@ -6,9 +6,7 @@ A Node JS global module for fetching data from the FreeGenes API from the termin
 npm i -g freegenes-fetch
 ```
 
-## Use
-
-### Collections
+## Collections
 For a list of options available and code examples:
 ```bash
 collections -h
@@ -16,7 +14,7 @@ collections -h
 collections --help
 ```
 
-#### All Collections
+### All Collections
 Use the `-a` or `--all` flag to indicate that you would like all records:
 ```bash
 collections -a
@@ -24,7 +22,7 @@ collections -a
 collections --all
 ```
 
-#### Collection
+### Collection
 Use the `-u` or `--uuid` flag to indicate the `uuid` of the collection you would like to fetch:
 ```bash
 collections -u <uuid>
@@ -32,7 +30,7 @@ collections -u <uuid>
 collections --uuid <uuid>
 ```
 
-#### Full Collection
+### Full Collection
 Use the `-f` or `--full` flag to fetch the full collection record including parts:
 ```bash
 collections -fu <uuid>
@@ -40,7 +38,7 @@ collections -fu <uuid>
 collections -u <uuid> --full
 ```
 
-#### Recursive Collection
+### Recursive Collection
 Use the `-r` or `--recurse` flag to fetch the full collection record including parts:
 ```bash
 collections -ru <uuid>
@@ -48,7 +46,7 @@ collections -ru <uuid>
 collections -u <uuid> --recurse
 ```
 
-### Parts
+## Parts
 For a list of options available and code examples:
 ```bash
 parts -h
@@ -56,7 +54,7 @@ parts -h
 parts --help
 ```
 
-#### All Parts
+### All Parts
 Use the `-a` or `--all` flag to indicate that you would like all records:
 ```bash
 parts -a
@@ -66,7 +64,7 @@ parts --all
 parts -af
 ```
 
-#### Part
+### Part
 Use the `-u` or `--uuid` flag to indicate the `uuid` of the part you would like to fetch:
 ```bash
 parts -u <uuid>
@@ -76,7 +74,7 @@ parts --uuid <uuid>
 parts --uuid <uuid> --fasta
 ```
 
-#### Full Part
+### Full Part
 Use the `-f` or `--full` flag to fetch the full part record including samples:
 ```bash
 parts -fu <uuid>
@@ -86,7 +84,7 @@ parts -u <uuid> --full
 parts -u <uuid> --full --fasta
 ```
 
-#### Full Part
+### Parts By Collection 
 Use the `-c` or `--collection` flag to fetch the all parts by collection `uuid`:
 ```bash
 parts -c <uuid>
