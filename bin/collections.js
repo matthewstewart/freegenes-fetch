@@ -6,7 +6,7 @@ const program = require('commander');
 program
 .version(package.version)
 .option('-a, --all', 'Fetch all collections')
-.option('-u, --uuid [uuid]', 'Set UUID for query')
+.option('-u, --uuid [uuid]', 'Fetch collection by UUID')
 .option('-f, --full', 'Get full collection record')
 .option('-r, --recurse', 'Get full collection record recursive tree');
 
@@ -21,8 +21,8 @@ program.on('--help', function(){
   console.log('      $ collections --uuid 0e19f75d-4e72-499b-924a-a55420a40606  # Get collection by uuid');
   console.log('      $ collections -fu 0e19f75d-4e72-499b-924a-a55420a40606  # Get full collection by uuid');
   console.log('      $ collections --uuid 0e19f75d-4e72-499b-924a-a55420a40606 --full # Get full collection by uuid');
-  console.log('      $ collections -fu 0e19f75d-4e72-499b-924a-a55420a40606  # Get recursive collection by uuid');
-  console.log('      $ collections --uuid 0e19f75d-4e72-499b-924a-a55420a40606 --full # Get recursive collection by uuid');
+  console.log('      $ collections -ru 0e19f75d-4e72-499b-924a-a55420a40606  # Get recursive collection by uuid');
+  console.log('      $ collections --uuid 0e19f75d-4e72-499b-924a-a55420a40606 --recurse # Get recursive collection by uuid');
 });
 
 program.parse(process.argv);

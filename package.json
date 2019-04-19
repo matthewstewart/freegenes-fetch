@@ -1,6 +1,6 @@
 {
   "name": "freegenes-fetch",
-  "version": "0.0.37",
+  "version": "0.0.4",
   "description": "A global module for fetching data from the FreeGenes API.",
   "main": "./lib/freegenes-fetch.js",
   "scripts": {
@@ -15,7 +15,8 @@
   },
   "bin": {
     "collections": "./bin/collections.js",
-    "parts": "./bin/parts.js"
+    "parts": "./bin/parts.js",
+    "plates": "./bin/plates.js"
   },
   "preferGlobal": true
 }

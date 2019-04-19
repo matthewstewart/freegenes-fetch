@@ -18,7 +18,7 @@ Usage: collections [options]
 Options:
   -V, --version      output the version number
   -a, --all          Fetch all collections
-  -u, --uuid [uuid]  Set UUID for query
+  -u, --uuid [uuid]  Fetch collection by UUID
   -f, --full         Get full collection record
   -r, --recurse      Get full collection record recursive tree
   -h, --help         output usage information
@@ -33,8 +33,8 @@ Examples:
       $ collections --uuid 0e19f75d-4e72-499b-924a-a55420a40606  # Get collection by uuid
       $ collections -fu 0e19f75d-4e72-499b-924a-a55420a40606  # Get full collection by uuid
       $ collections --uuid 0e19f75d-4e72-499b-924a-a55420a40606 --full # Get full collection by uuid
-      $ collections -fu 0e19f75d-4e72-499b-924a-a55420a40606  # Get recursive collection by uuid
-      $ collections --uuid 0e19f75d-4e72-499b-924a-a55420a40606 --full # Get recursive collection by uuid
+      $ collections -ru 0e19f75d-4e72-499b-924a-a55420a40606  # Get recursive collection by uuid
+      $ collections --uuid 0e19f75d-4e72-499b-924a-a55420a40606 --recurse # Get recursive collection by uuid
 ```
 
 ## Parts
@@ -77,4 +77,37 @@ Examples:
       $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --full # Get full part by uuid
       $ parts -ftu 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get full part by uuid in fasta
       $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --full --fasta # Get full part by uuid in fasta
+```
+
+## Plates
+For a list of options available and code examples:
+```bash
+plates -h
+# OR
+plates --help
+
+Usage: plates [options]
+
+Options:
+  -V, --version      output the version number
+  -a, --all          Fetch all plates
+  -u, --uuid [uuid]  Fetch plate by UUID
+  -f, --full         Get full plate record
+  -r, --recurse      Get full plate record recursive tree
+  -h, --help         output usage information
+
+Examples:
+  Plates:
+    All:
+      $ plates -a  # Get all plates
+      $ plates --all  # Get all plates
+      $ plates -af  # Get all plates with wells
+      $ plates --all --full # Get all plates with wells
+    One:
+      $ plates -u a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get plates by uuid
+      $ plates --uuid a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get plates by uuid
+      $ plates -fu a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get full plate by uuid
+      $ plates --uuid a364eab8-0c68-46b2-8aca-51b72d2f3cb5 --full # Get full plate by uuid
+      $ plates -ru a364eab8-0c68-46b2-8aca-51b72d2f3cb5  # Get recursive plate by uuid
+      $ plates --uuid a364eab8-0c68-46b2-8aca-51b72d2f3cb5 --recurse # Get recursive plate by uuid
 ```
