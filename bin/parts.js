@@ -10,18 +10,31 @@ program
 .option('-u, --uuid [uuid]', 'Fetch part by UUID')
 .option('-f, --full', 'Get full part record')
 .option('-c, --collection [uuid]', 'Get parts by collection uuid')
-.option('-t, --fasta', 'Return result(s) in fasta format');
+.option('-t, --fasta', 'Return result(s) in fasta format')
+.option('-s, --save [destinationFilePath]', 'Save result(s) to .json/.fa file.');
 
 program.on('--help', function(){
   console.log('\nExamples:')
-  console.log('Parts:  $ parts -a');
-  console.log('Parts Fasta:  $ parts -a --fasta');
-  console.log('Part:  $ parts -u 6295083d-8a28-4e9e-8b3d-9429c2544761');
-  console.log('Part Fasta:  $ parts -u 6295083d-8a28-4e9e-8b3d-9429c2544761 --fasta');
-  console.log('Full Part:  $ parts -u 6295083d-8a28-4e9e-8b3d-9429c2544761 --full');
-  console.log('Full Part Fasta:  $ parts -u 6295083d-8a28-4e9e-8b3d-9429c2544761 --full --fasta');
-  console.log('Parts By Category:  $ parts -c 0e19f75d-4e72-499b-924a-a55420a40606');
-  console.log('Parts By Category Fasta:  $ parts -c 0e19f75d-4e72-499b-924a-a55420a40606 --fasta');
+  console.log('  Parts:');
+  console.log('    All:');
+  console.log('      $ parts -a  # Get all parts');
+  console.log('      $ parts --all  # Get all parts');
+  console.log('      $ parts -at  # Get all parts in fasta');
+  console.log('      $ parts --all --fasta  # Get all parts in fasta');
+  console.log('    All By Category:');
+  console.log('      $ parts -c 0e19f75d-4e72-499b-924a-a55420a40606  # Get all parts by category uuid');
+  console.log('      $ parts --collection 0e19f75d-4e72-499b-924a-a55420a40606  # Get all parts by category uuid');
+  console.log('      $ parts -tc 0e19f75d-4e72-499b-924a-a55420a40606  # Get all parts by category uuid in fasta');
+  console.log('      $ parts --collection 0e19f75d-4e72-499b-924a-a55420a40606 --fasta # Get all parts by category uuid in fasta');
+  console.log('    One:');
+  console.log('      $ parts -u 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get part by uuid');
+  console.log('      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get part by uuid');
+  console.log('      $ parts -tu 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get part by uuid in fasta');
+  console.log('      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --fasta # Get part by uuid in fasta');
+  console.log('      $ parts -fu 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get full part by uuid');
+  console.log('      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --full # Get full part by uuid');
+  console.log('      $ parts -ftu 6295083d-8a28-4e9e-8b3d-9429c2544761  # Get full part by uuid in fasta');
+  console.log('      $ parts --uuid 6295083d-8a28-4e9e-8b3d-9429c2544761 --full --fasta # Get full part by uuid in fasta');
 });
 
 program.parse(process.argv);
