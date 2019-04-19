@@ -1,0 +1,21 @@
+{
+  "name": "freegenes-fetch",
+  "version": "0.0.34",
+  "description": "A global module for fetching data from the FreeGenes API.",
+  "main": "./lib/freegenes-fetch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Matthew Stewart",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "commander": "^2.20.0",
+    "node-fetch": "^2.3.0"
+  },
+  "bin": {
+    "collections": "./bin/collections.js",
+    "parts": "./bin/parts.js"
+  },
+  "preferGlobal": true
+}
